@@ -99,6 +99,11 @@ class TransformerExampleViewController: UIViewController,FSPagerViewDataSource,F
         cell.imageView?.image = UIImage(named: self.imageNames[index])
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
+        cell.imageView?.layer.cornerRadius = 5
+        cell.contentView.layer.shadowColor = UIColor.black.cgColor
+        cell.contentView.layer.shadowRadius = 5
+        cell.contentView.layer.shadowOpacity = 0.1
+        cell.contentView.layer.shadowOffset = CGSize(width: 0, height: 3.5)
         return cell
     }
     

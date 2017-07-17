@@ -154,8 +154,8 @@ open class FSPagerViewTransformer: NSObject {
             let scale = max(1 - (1-self.minimumScale) * abs(position), self.minimumScale)
             let transform = CGAffineTransform(scaleX: scale, y: scale)
             attributes.transform = transform
-            let alpha = (self.minimumAlpha + (1-abs(position))*(1-self.minimumAlpha))
-            attributes.alpha = alpha
+//            let alpha = (self.minimumAlpha + (1-abs(position))*(1-self.minimumAlpha))
+//            attributes.alpha = alpha
             let zIndex = (1-abs(position)) * 10
             attributes.zIndex = Int(zIndex)
         case .coverFlow:

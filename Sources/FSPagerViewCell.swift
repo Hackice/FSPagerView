@@ -46,7 +46,7 @@ open class FSPagerViewCell: UICollectionViewCell {
     fileprivate weak var _imageView: UIImageView?
     
     fileprivate let kvoContext = UnsafeMutableRawPointer(bitPattern: 0)
-    fileprivate let selectionColor = UIColor(white: 0.2, alpha: 0.2)
+    fileprivate let selectionColor = UIColor.clear
     
     fileprivate weak var _selectedForegroundView: UIView?
     fileprivate var selectedForegroundView: UIView? {
@@ -99,10 +99,6 @@ open class FSPagerViewCell: UICollectionViewCell {
     fileprivate func commonInit() {
         self.contentView.backgroundColor = UIColor.clear
         self.backgroundColor = UIColor.clear
-        self.contentView.layer.shadowColor = UIColor.black.cgColor
-        self.contentView.layer.shadowRadius = 5
-        self.contentView.layer.shadowOpacity = 0.75
-        self.contentView.layer.shadowOffset = .zero
     }
     
     deinit {
